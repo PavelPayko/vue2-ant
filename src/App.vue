@@ -18,22 +18,22 @@ export default {
   <a-layout id="components-layout-demo-custom-trigger">
     <a-layout-sider v-model="collapsed" :trigger="null" theme="light">
       <div class="logo" />
-      <a-menu theme="light" mode="inline" :default-selected-keys="['1']">
+      <a-menu theme="light" mode="inline" :default-selected-keys="['2']">
         <a-menu-item key="1" :style="{ padding: 0}" class="ant-menu-item-styled">
           <router-link to="/" class="ant-menu-item-link"> 
-            <a-icon type="video-camera" />
+            <a-icon type="bar-chart" />
             <span>Home</span>
           </router-link>
         </a-menu-item>
         <a-menu-item key="2" :style="{ padding: 0}" class="ant-menu-item-styled">
           <router-link to="/events" class="ant-menu-item-link"> 
-            <a-icon type="video-camera" />
+            <a-icon type="pic-right" />
             <span>События</span>
           </router-link>
         </a-menu-item>
         <a-menu-item key="3" class="ant-menu-item-styled">
           <router-link to="/about" class="ant-menu-item-link">
-            <a-icon type="upload" />
+            <a-icon type="setting" />
             <span>About</span>
           </router-link>
         </a-menu-item>
