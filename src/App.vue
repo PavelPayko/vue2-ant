@@ -18,39 +18,33 @@ export default {
   <a-layout id="components-layout-demo-custom-trigger">
     <a-layout-sider v-model="collapsed" :trigger="null" theme="light">
       <div class="logo" />
-      <a-menu theme="light" mode="inline" :default-selected-keys="['2']">
-        <a-menu-item key="1" :style="{ padding: 0}" class="ant-menu-item-styled">
+      <a-menu theme="light" mode="inline" :default-selected-keys="['1']">
+        <a-menu-item key="1" class="ant-menu-item-styled">
           <router-link to="/" class="ant-menu-item-link"> 
-            <a-icon type="bar-chart" />
-            <span>Home</span>
-          </router-link>
-        </a-menu-item>
-        <a-menu-item key="2" :style="{ padding: 0}" class="ant-menu-item-styled">
-          <router-link to="/events" class="ant-menu-item-link"> 
             <a-icon type="pic-right" />
             <span>События</span>
           </router-link>
         </a-menu-item>
+
+        <a-menu-item key="2" class="ant-menu-item-styled">
+          <router-link to="/dashboard" class="ant-menu-item-link"> 
+            <a-icon type="bar-chart" />
+            <span>dashboard</span>
+          </router-link>
+        </a-menu-item>
+        
         <a-menu-item key="3" class="ant-menu-item-styled">
-          <router-link to="/about" class="ant-menu-item-link">
+          <router-link to="/settings" class="ant-menu-item-link">
             <a-icon type="setting" />
-            <span>About</span>
+            <span>settings</span>
           </router-link>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
-      <!-- <a-layout-header style="background: #fff; padding: 0">
-        <a-icon
-          class="trigger"
-          :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-          @click="() => (collapsed = !collapsed)"
-        />
-      </a-layout-header> -->
       <a-layout-content
         :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }"
       >
-        <!-- Content -->
         <router-view />
       </a-layout-content>
     </a-layout>
